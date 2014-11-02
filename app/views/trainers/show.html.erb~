@@ -3,7 +3,7 @@
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 <h4>My Pokemon:</h4>
         <ul>
-          <% @trainer.pokemons.each do |pokemon| %>
+          <% trainer.pokemons.each do |pokemon| %>
             <li><%= pokemon.name %>: <%= pokemon.level %></li>
           <% end %>
         </ul>
