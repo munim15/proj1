@@ -1,8 +1,23 @@
 class PokemonsController < ApplicationController
   def new
+      puts 'HEEEFSFAFSAFSAFSFSFSAFSFS'
+      #@pokemon = Pokemon.new
   end
 
   def create
+      puts "IN HERE" 
+      pokemon = Pokemon.new
+      pokemon.name = params[:pokemon][:name]
+      pokemon.health = 100
+      pokemon.level = 1
+      pokemon.trainer_id = current_trainer.id
+      if pokemon.save
+         path = '/trainers/' + current_trainer.id.to_s
+         redirect_to path
+      else
+         flash[:error] = pokemon.errors.full_messages.to_sentence
+         render new_pokemon_path
+      end
   end
 
   def show
