@@ -4,6 +4,6 @@
 <h4>My Pokemon:</h4>
         <ul>
           <% @trainer.pokemons.each do |pokemon| %>
-            <li><%= pokemon.name %>: <%= pokemon.level %></li>
+            <li>Name: <%= pokemon.name %> Level: <%= pokemon.level %> Health: <%= pokemon.health%> <%= button_to "Damage!", damage_path(id: pokemon.id), :class => "button medium", :method => :patch %></li>
           <% end %>
         </ul>

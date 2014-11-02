@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  patch 'asdf', to: 'pokemons#capture'
+  patch 'capture', to: 'pokemons#capture'
   devise_for :trainers
   resources :trainers
 end
