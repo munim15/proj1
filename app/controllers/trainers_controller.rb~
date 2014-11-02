@@ -7,7 +7,7 @@ class TrainersController < ApplicationController
 
   def show
     @trainer = Trainer.find(params[:id])
-    @curr_user = current_trainer
+    @curr_user = current_user
   end
 
 end
