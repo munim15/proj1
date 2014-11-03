@@ -1,8 +1,0 @@
-<td><%= link_to trainer.name, trainer %></td>
-<td><%= link_to trainer.email, trainer %></td>
-<h4>My Pokemon:</h4>
-        <ul>
-          <% trainer.pokemons.each do |pokemon| %>
-            <li><%= pokemon.name %>: <%= pokemon.level %></li>
-          <% end %>
-        </ul>
